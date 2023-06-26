@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --preto: #000000;
+  --preto-2: #313131;
+  --branco: #FFFFFF;
+  --cinza: #A0A0A0;
+  --laranja: #F69906;
+  --fonte-principal: 'Roboto', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--fonte-principal);
+  background-color: var(--preto);
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.calculadora__visor {
+  color: var(--branco);
+  font-size: 4rem;
+  border-radius: 8px;
+  text-align: right;
+  direction: ltr;
+  overflow-wrap: break-word;
+  width: 4.8em;
+}
+
+/* .container__calculadora {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 31%;
+} */
+
+.container__calculadora {
+  display: grid;
+  grid-template-areas: 
+  "button button button button";
+  gap: 10px;
+}
+
+.calculadora__botao {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: var(--preto-2);
+  color: var(--branco);
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.calculadora__botao0 {
+  grid-column: span 2;
+  width: 100%;
+  border-radius: 70px;
+  text-align: start;
+  padding-left: 1em;
+}
+
+.calculadora__botao:nth-child(1),
+.calculadora__botao:nth-child(2),
+.calculadora__botao:nth-child(3) {
+  background-color: var(--cinza);
+  color: var(--preto);
+}
+
+.calculadora__botao:nth-child(4),
+.calculadora__botao:nth-child(8),
+.calculadora__botao:nth-child(12),
+.calculadora__botao:nth-child(16),
+.calculadora__botao:nth-child(19),
+.calculadora__botao:nth-child(20) {
+  background-color: var(--laranja);
+}
+
+.calculadora__botao:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
