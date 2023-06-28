@@ -30,7 +30,7 @@ function numeros() {
     let operador = document.querySelector(`.botao__op${op}`)
     operador.addEventListener("click", () => {
       visor.textContent = ""
-      operacao = op
+      operacao +=op
     })
   }
 }
